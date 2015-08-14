@@ -1,0 +1,19 @@
+// --------------------------------------------
+// ### Main Navigation
+// --------------------------------------------
+
+$sideNav: (
+  current: saturate($callout, 20%),
+  space: .694em,
+  headingSize: 1.25em,
+  bg--dark: $brand,
+  bg--light: lighten($brand, 10%)
+);
+
+// --------------------------------------------
+// ### Modules
+// --------------------------------------------
+
+$module: (
+  mastheadBg: $gray--light,
+);

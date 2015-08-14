@@ -1,0 +1,20 @@
+%html
+  %head
+    = partial("partials/head")
+
+  %body.l--bodyLayout
+
+    %section.l--main
+
+      %aside.sideBar
+        .l--sideBar--tiny.sideBar--tiny
+          = partial("partials/sidebar--tiny")
+        .l--sideBar--big.sideBar--big
+          = partial("partials/sidebar--big")
+
+      %section.l--content
+        #main{:role => "main"}
+          %article
+            = yield
+
+    = google_analytics_tag

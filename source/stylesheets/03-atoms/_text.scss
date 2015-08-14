@@ -1,0 +1,41 @@
+// --------------------------------------------
+// ### Headings
+// --------------------------------------------
+
+$sizes:
+    scale--1 2.625em  $serif  map-get($fontWeight, bold)   false
+  , scale--2 2.125em  $serif  map-get($fontWeight, bold)   false
+  , scale--3 1.75em   $serif  map-get($fontWeight, bold)   false
+  , scale--4 1.375em  $serif  map-get($fontWeight, light)  false
+  , scale--5 1em      $serif  map-get($fontWeight, light)  false
+  , scale--6 0.81em   $serif  map-get($fontWeight, bold)   false;
+
+@each $scale in $sizes {
+  .#{nth($scale, 1)} {
+    font-size: #{nth($scale, 2)};
+    font-family: #{nth($scale, 3)};
+    font-weight: #{nth($scale, 5)};
+
+    @if nth($scale, 5) {
+      text-transform: uppercase;
+    }
+  }
+}
+
+// --------------------------------------------
+// ### Misc
+// --------------------------------------------
+
+p {
+  font-size: 1.25em;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+}
+
+%label {
+  @extend .scale--6;
+  color: darken($gray--light, 30%);
+  font-family: $sansSerif;
+  font-weight: 700;
+  text-transform: uppercase;
+}

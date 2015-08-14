@@ -1,0 +1,80 @@
+// --------------------------------------------
+// ### Sidebar
+// --------------------------------------------
+
+.sideBar {
+  @extend %flexboxGrid;
+  flex-direction: row;
+}
+
+.sideBar--big {
+  @extend %flexboxGrid;
+  flex-direction: column;
+  align-items: center;
+  padding: map-get($sidebar, padding);
+  background-image:
+    linear-gradient(
+    to bottom left,
+    $brand, darken($brand, 10%)
+  );
+}
+
+.sideBar--tiny {
+  background-color: $gray--light;
+}
+
+
+// --------------------------------------------
+// ### Footer
+// --------------------------------------------
+
+.footerMain {
+  background-color: map-get($footerMain, bg);
+  width: 100%;
+  text-align: center;
+  color: map-get($footerMain, color)
+}
+
+// --------------------------------------------
+// ### Masthead
+// --------------------------------------------
+
+.masthead {
+  @extend %flexboxGrid__cell;
+  flex: 0 1 auto;
+}
+
+.masthead__subhead {
+  @extend .scale--6;
+  color: map-get($sidebar, color);
+  font-style: italic;
+  text-align: center;
+  font-weight: map-get($fontWeight, light);
+}
+
+// --------------------------------------------
+// ### Greetings
+// --------------------------------------------
+
+.greetings {
+  @extend %flexboxGrid__cell;
+  flex: 0 0 auto;
+}
+
+.greetings__text {
+  @extend .scale--6;
+  color: map-get($sidebar, color);
+  font-style: italic;
+  text-align: center;
+  font-weight: map-get($fontWeight, light);
+  text-transform: none;
+}
+
+.greetings__image {
+  max-width: 50px;
+  margin: $gutter/2 auto;
+
+  img {
+    width: 100%;
+  }
+}

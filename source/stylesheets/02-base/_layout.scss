@@ -1,0 +1,47 @@
+// --------------------------------------------
+// ### General
+// --------------------------------------------
+
+.l--bodyLayout {
+  @extend %flexboxGrid;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.l--sideBar--tiny {
+  @extend %flexboxGrid__cell;
+  flex: 0 0 auto;
+  order: 1;
+}
+
+.l--sideBar--big {
+  @extend %flexboxGrid__cell;
+  flex: 1 0 auto;
+  order: 2;
+  margin-right: 4%;
+}
+
+.l--main {
+  @extend %flexboxGrid__cell;
+  @extend %flexboxGrid--RtoC;
+  flex: 2 0 auto;
+}
+
+.l--content {
+  @extend %flexboxGrid__cell;
+  order: 3;
+}
+
+.wrapper {
+  max-width: 43.75em;
+  padding: $gutter 0;
+  margin: 0 auto;
+}
+
+%l--third {
+  width: 33.3%;
+}
+
+%l--half {
+  width: 50%;
+}

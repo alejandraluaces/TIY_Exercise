@@ -1,0 +1,87 @@
+// --------------------------------------------
+// ### Extends
+// --------------------------------------------
+
+%module {
+  border: 1px solid darken(map-get($module, mastheadBg), 5%);
+}
+
+%module__text {
+  padding: 1em;
+
+  header {
+    margin-bottom: .579em;
+  }
+}
+
+%module__heading {
+  @extend .scale--4;
+}
+
+%module__subhead {
+  @extend .scale--6;
+  color: darken($gray, 25%);
+}
+
+%module__masthead {
+  @extend .scale--6;
+  padding: $gutter/2;
+  background-color: map-get($module, mastheadBg);
+  text-transform: uppercase;
+
+  &:before {
+    content: '\261E';
+    margin-right: $gutter/2;
+  }
+}
+
+// --------------------------------------------
+// ### Key Info
+// --------------------------------------------
+
+.module--key {
+  @extend %module;
+  margin: $gutter auto;
+}
+
+.module--key--intro {
+  @extend .module--key;
+  width: 70%;
+  margin: $gutter 0;
+}
+
+.module--key__masthead {
+  @extend %module__masthead;
+}
+
+.module--key__paragraph {
+  margin: $gutter/2;
+}
+
+// --------------------------------------------
+// ### Bio
+// --------------------------------------------
+
+.module--bio {
+  @extend %module;
+  @extend %l--third;
+  @extend %float--right;
+  margin-right: -30%;
+  width: 40%;
+}
+
+.module--bio__masthead {
+  @extend %module__masthead;
+}
+
+.module--bio__text {
+  @extend %module__text;
+}
+
+.module--bio__heading {
+  @extend %module__heading;
+}
+
+.module--bio__subhead {
+  @extend %module__subhead;
+}

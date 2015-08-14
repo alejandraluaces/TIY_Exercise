@@ -1,0 +1,21 @@
+// --------------------------------------------
+// ### Flexbox grid
+// --------------------------------------------
+
+%flexboxGrid {
+  display: flex;
+}
+
+%flexboxGrid--RtoC {
+  @extend %flexboxGrid;
+  flex-direction: row;
+}
+
+%flexboxGrid--CtoR {
+  @extend %flexboxGrid;
+  flex-direction: column;
+}
+
+%flexboxGrid__cell {
+  flex: 1;
+}

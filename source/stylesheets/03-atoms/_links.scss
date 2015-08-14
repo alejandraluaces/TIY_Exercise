@@ -1,0 +1,38 @@
+a {
+  @include defaultTransition;
+  text-decoration: none;
+  color: map-get($link, default);
+
+  article & {
+    color: inherit;
+    background-image: linear-gradient(to bottom, transparent 95%, $gray 20%);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: underline;
+
+    .sideBar &,
+    article & {
+      text-decoration: none;
+    }
+
+    article & {
+      color: $blue;
+    }
+
+    .sideBar & {
+      color: map-get($sidebar, hover);
+    }
+  }
+
+  .sideBar & {
+    color: map-get($sidebar, color);
+    transition: none;
+  }
+
+  .sideNav__heading & {
+    color: map-get($link, sideNav__heading);
+  }
+}

@@ -1,0 +1,88 @@
+// --------------------------------------------
+// ### Containers
+// --------------------------------------------
+
+.sideNav {
+  @extend %flexboxGrid__cell;
+  flex: 2 1 auto;
+  width: 100%;
+}
+
+.locked {
+  opacity: .3;
+}
+
+// --------------------------------------------
+// ### Items
+// --------------------------------------------
+
+.sideNav__label {
+  @extend %label;
+}
+
+.sideNav__header {
+  margin-bottom: 2em;
+}
+
+.sideNav__icon {
+  padding: 1em;
+  display: block;
+}
+
+.sideNav--tiny__item {
+  max-width: 60px;
+
+  &:hover {
+    background-color: darken($gray--light, 8%);
+  }
+
+img {
+  width: 100%;
+  }
+}
+
+.sideNav__list {
+  @extend %flexboxGrid;
+  flex-direction: column;
+}
+
+.sideNav__link {
+  display: block;
+
+  &.currentPage {
+    color: map-get($sideNav, current);
+
+    &:after {
+      content: '\2192';
+      margin-left: .5em;
+    }
+  }
+}
+
+.sideNav--big__item {
+  flex: 1;
+  font-weight: map-get($fontWeight, light);
+  margin-bottom: map-get($sideNav, space)/2;
+  font-family: $sansSerif;
+}
+
+.sideNav__heading {
+  font-size: map-get($sideNav, headingSize);
+  font-weight: map-get($fontWeight, bold);
+  margin-bottom: map-get($sideNav, space)/2;
+  color: lighten($brand, 60%)
+}
+
+.sideNav__mobileButton {
+  @extend .scale--4;
+  font-weight: map-get($fontWeight, bold);
+  position: absolute;
+  left: -99999em;
+  text-align: center;
+  color: map-get($sidebar, color);
+  margin: map-get($sideNav, space) auto;
+
+  a {
+    color: $white;
+  }
+}
