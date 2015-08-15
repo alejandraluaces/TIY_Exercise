@@ -24,7 +24,7 @@
 
   %p Block-level elements begin on a new line, stacking one on top of the other, and occupy any available width. Block-level elements may be nested inside one another and may wrap inline-level elements. We’ll most commonly see block-level elements used for larger pieces of content, such as paragraphs.
 
-  %aside.module.float--right
+  %aside.module--video.float--right
     %header.module__masthead
       .module__logo
         %img{:src => "/images/icons/course-logo.svg"}
@@ -33,6 +33,8 @@
       %iframe{:allowfullscreen => "", :frameborder => "0", :mozallowfullscreen => "", :src => "https://player.vimeo.com/video/64245253", :webkitallowfullscreen => ""}
 
   %p Inline-level elements do not begin on a new line. They fall into the normal flow of a document, lining up one after the other, and only maintain the width of their content. Inline-level elements may be nested inside one another; however, they cannot wrap block-level elements. We’ll usually see inline-level elements with smaller pieces of content, such as a few words.
+
+  %p Many different forms of media and content exist online; however, text is predominant. Accordingly, there are a number of different elements for displaying text on a web page. For now we’ll focus on the more popular elements, including headings, paragraphs, bold text to show importance, and italics for emphasis. Later, within Lesson 6, “Working with Typography,” we’ll take a closer look at how to style text.
 
   %aside.module--full
     %header.module__masthead
@@ -65,7 +67,7 @@
       %img{:src => "/images/runner.gif"}
 
 .wrapper
-  %h1 Ruby Example
+  %h2 Ruby Example
   %p Many web apps let users sign up for a new account and log in and out of their accounts. Together, signing up, logging in and logging out make up an authentication system.
 
   %p Let's create an authentication system for a photosharing website built with Ruby on Rails.

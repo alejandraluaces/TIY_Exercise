@@ -9,6 +9,11 @@ article {
       @extend .scale--#{$heading};
     }
   }
+
+  h3 {
+    font-family: $sansSerif;
+    color: lighten($brand, 20%);
+  }
 }
 
 .article__label {
