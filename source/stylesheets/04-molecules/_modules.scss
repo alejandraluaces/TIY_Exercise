@@ -42,6 +42,12 @@
   }
 }
 
+.module__code {
+  img {
+    width: 100%;
+  }
+}
+
 .module__heading {
   @extend .scale--4;
 
