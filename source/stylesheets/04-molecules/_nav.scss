@@ -75,13 +75,6 @@ img {
   font-family: $sansSerif;
 }
 
-.sideNav__heading {
-  font-size: map-get($sideNav, headingSize);
-  font-weight: map-get($fontWeight, bold);
-  margin-bottom: map-get($sideNav, space)/2;
-  color: lighten($brand, 60%)
-}
-
 .sideNav__mobileButton {
   @extend .scale--4;
   font-weight: map-get($fontWeight, bold);

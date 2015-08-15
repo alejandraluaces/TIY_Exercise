@@ -15,7 +15,7 @@
   background-image:
     linear-gradient(
     to bottom left,
-    $brand, darken($brand, 10%)
+    lighten($brand, 10%), darken($brand, 10%)
   );
 }
 
@@ -31,4 +31,11 @@
   img {
     width: 100%;
   }
+}
+
+.sideBar__heading {
+  font-size: map-get($sideNav, headingSize);
+  font-weight: map-get($fontWeight, bold);
+  margin-bottom: map-get($sideNav, space)/2;
+  color: $white;
 }
