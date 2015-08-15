@@ -18,9 +18,39 @@
             height: 90px;
             }
 .wrapper
-  %h2 Identifying divisions and spans
+  %h3 Identifying divisions and spans
   %p Most elements are either block- or inline-level elements. What’s the difference?
 
   %p Block-level elements begin on a new line, stacking one on top of the other, and occupy any available width. Block-level elements may be nested inside one another and may wrap inline-level elements. We’ll most commonly see block-level elements used for larger pieces of content, such as paragraphs.
 
+  %aside.module.float--right
+    %header.module__masthead
+      .module__logo
+        %img{:src => "/images/icons/course-logo.svg"}
+      .module__label video: welcome to class!
+    .module__image
+      %iframe{:allowfullscreen => "", :frameborder => "0", :mozallowfullscreen => "", :src => "https://player.vimeo.com/video/64245253", :webkitallowfullscreen => ""}
+
   %p Inline-level elements do not begin on a new line. They fall into the normal flow of a document, lining up one after the other, and only maintain the width of their content. Inline-level elements may be nested inside one another; however, they cannot wrap block-level elements. We’ll usually see inline-level elements with smaller pieces of content, such as a few words.
+
+  %aside.module--full
+    %header.module__masthead
+      .module__logo
+        %img{:src => "/images/icons/course-logo.svg"}
+      .module__label test your knowledge
+    .module__text
+      %h4 Question
+      %p Brief description
+
+      %ul.radio__list
+        %li.radio__item
+          %input#radio--1.radio__button{:name => "radio__group", :type => "radio"}
+          %label.radio__label{:for => "radio--1"} First Choice
+
+        %li.radio__item
+          %input#radio--2.radio__button{:name => "radio__group",:type => "radio"}
+          %label.radio__label{:for => "radio--2"} Second Choice
+
+        %li.radio__item
+          %input#radio--3.radio__button{:name => "radio__group",:type => "radio"}
+          %label.radio__label{:for => "radio--3"} Third Choice

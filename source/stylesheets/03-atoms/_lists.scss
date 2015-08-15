@@ -1,3 +1,42 @@
 li {
   list-style-type: none;
 }
+
+.radio__button {
+    opacity: 0;
+    position: absolute;
+}
+
+.radio__button,
+.radio__label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.radio__label {
+    position: relative;
+}
+
+.radio__button + .radio__label:before {
+    content: '';
+    background: $white;
+    border: 2px solid $gray--light;
+    display: inline-block;
+    vertical-align: middle;
+    width: .5em;
+    height: .5em;
+    padding: .2em;
+    margin-right: .5em;
+    text-align: center;
+}
+
+.radio__button + .radio__label:before {
+    border-radius: 50%;
+}
+
+.radio__button:checked + .radio__label:before {
+    background: #ccc;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+}

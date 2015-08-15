@@ -2,11 +2,19 @@
 // ### Extends
 // --------------------------------------------
 
-%module {
-  border: 1px solid darken(map-get($module, mastheadBg), 5%);
+.module {
+  border: 1px solid $gray--light;
+  position: relative;
+  z-index: 1;
+  background-color: darken($gray--light, 10%)
 }
 
-%module__text {
+.module--full {
+  @extend .module;
+  width: 100%;
+}
+
+.module__text {
   padding: 1em;
 
   header {
@@ -14,72 +22,41 @@
   }
 }
 
-%module__heading {
-  @extend .scale--4;
+.module__image {
+
+  img,
+  iframe {
+    width: 100%;
+  }
 }
 
-%module__subhead {
+.module__heading {
+  @extend .scale--4;
+
+}
+
+.module__subhead {
   @extend .scale--6;
   color: darken($gray, 25%);
 }
 
-%module__masthead {
-  @extend .scale--6;
-  padding: $gutter/2;
-  background-color: map-get($module, mastheadBg);
-  text-transform: uppercase;
+.module__label {
+  @extend %label;
+}
 
-  &:before {
-    content: '\261E';
-    margin-right: $gutter/2;
+.module__logo {
+  max-width: 20px;
+  display: inline-block;
+  margin-right: $gutter;
+
+  img {
+    width: 100%;
   }
 }
 
-// --------------------------------------------
-// ### Key Info
-// --------------------------------------------
-
-.module--key {
-  @extend %module;
-  margin: $gutter auto;
-}
-
-.module--key--intro {
-  @extend .module--key;
-  width: 70%;
-  margin: $gutter 0;
-}
-
-.module--key__masthead {
-  @extend %module__masthead;
-}
-
-.module--key__paragraph {
-  margin: $gutter/2;
-}
-
-// --------------------------------------------
-// ### Bio
-// --------------------------------------------
-
-.module--bio {
-  @extend %module;
-  @extend %l--third;
-  width: 40%;
-}
-
-.module--bio__masthead {
-  @extend %module__masthead;
-}
-
-.module--bio__text {
-  @extend %module__text;
-}
-
-.module--bio__heading {
-  @extend %module__heading;
-}
-
-.module--bio__subhead {
-  @extend %module__subhead;
+.module__masthead {
+  display: flex;
+  flex-direction: row;
+  background-color: darken($gray--light, 20%);
+  padding: $gutter/2;
 }

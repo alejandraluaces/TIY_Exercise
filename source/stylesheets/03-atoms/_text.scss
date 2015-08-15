@@ -34,10 +34,17 @@ p {
 
 %label {
   @extend .scale--6;
-  color: darken($gray--light, 30%);
   font-family: $sansSerif;
   font-weight: 700;
   text-transform: uppercase;
+
+  .sideBar & {
+    color: darken($gray--light, 30%);
+  }
+
+  article & {
+    color: darken($gray--light, 50%);
+  }
 }
 
 

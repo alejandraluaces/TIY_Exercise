@@ -1,13 +1,3 @@
-.clip--speechBubble {
-  clip-path: polygon(0% 0%, 100% 0%, 100% 65%, 15% 65%, 0% 73%, 0% 75%, 0% 75%);
-  width: 100%;
-  margin-bottom: -40%;
-
-  img & {
-    width: 100%;
-  }
-}
-
 .background--logo {
   position: fixed;
   opacity: .05;
@@ -19,4 +9,5 @@
   background-size: 500px 430px;
   right: $gutter;
   top: $gutter;
+  z-index: -1;
 }
