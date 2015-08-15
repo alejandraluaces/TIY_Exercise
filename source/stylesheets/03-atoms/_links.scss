@@ -31,8 +31,4 @@ a {
     color: map-get($sidebar, color);
     transition: none;
   }
-
-  .sideNav__heading & {
-    color: map-get($link, sideNav__heading);
-  }
 }
