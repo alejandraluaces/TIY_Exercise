@@ -7,3 +7,16 @@
     width: 100%;
   }
 }
+
+.background--logo {
+  position: absolute;
+  opacity: .07;
+  display: block;
+  text-indent: -9999px;
+  width: 500px;
+  height: 430px;
+  background: url('../images/icons/iron-yard-logo.svg');
+  background-size: 500px 430px;
+  right: $gutter;
+  top: $gutter;
+}

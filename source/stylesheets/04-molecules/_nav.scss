@@ -20,6 +20,15 @@
   @extend %label;
 }
 
+.logo {
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: none;
+  }
+}
+
 .sideNav__header {
   margin-bottom: 2em;
 }

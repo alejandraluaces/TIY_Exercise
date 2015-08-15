@@ -25,11 +25,13 @@
   @extend %flexboxGrid__cell;
   @extend %flexboxGrid--RtoC;
   flex: 2 0 auto;
+  position: relative;
 }
 
 .l--content {
   @extend %flexboxGrid__cell;
   order: 3;
+  position: relative;
 }
 
 .wrapper {
