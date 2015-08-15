@@ -12,10 +12,15 @@
 .module--full {
   @extend .module;
   width: 100%;
+  margin: $gutter*2 auto;
 }
 
 .module__text {
   padding: 1em;
+
+  p {
+    margin-bottom: 0;
+  }
 
   header {
     margin-bottom: .579em;

@@ -18,7 +18,7 @@
   @extend %flexboxGrid__cell;
   flex: 1 0 auto;
   order: 2;
-  margin-right: 4%;
+  margin-right: 4em;
 }
 
 .l--main {
@@ -38,7 +38,6 @@
   @extend %group;
   max-width: 43.75em;
   padding: $gutter 0;
-  margin: 0 auto;
 }
 
 %l--third {
