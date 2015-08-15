@@ -5,6 +5,8 @@
 .sideBar {
   @extend %flexboxGrid;
   flex-direction: row;
+  height: 100vh;
+  position: fixed;
 }
 
 .sideBar--big {

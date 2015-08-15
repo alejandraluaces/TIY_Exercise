@@ -32,6 +32,8 @@
   @extend %flexboxGrid__cell;
   order: 3;
   position: relative;
+  overflow: scroll;
+  margin-left: 25em;
 }
 
 .wrapper {
