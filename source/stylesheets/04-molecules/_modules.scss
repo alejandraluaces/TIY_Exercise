@@ -65,8 +65,6 @@
 .module--bio {
   @extend %module;
   @extend %l--third;
-  @extend %float--right;
-  margin-right: -30%;
   width: 40%;
 }
 
